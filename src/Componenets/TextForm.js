@@ -101,7 +101,7 @@ export default function TextForm(props) {
                 <Button className={`bg-${props.mode === 'dark' ? "primary text-light border border-secondary" : "secondary text-light border"} mb-1 py-1 px-3 btn`} onClick={extraspace} value="Remove extra Space" />
             </div>
             <br />
-            <div className={`btn btn-${props.mode === 'dark' ? 'primary' : 'secondary'} me-2`}>{(text.length > 0) ? text.trim().split(/[ ]+/).length : 0} Words / {text.length} Characters</div>
+            <div className={`btn btn-${props.mode === 'dark' ? 'primary' : 'secondary'} me-2`}>{(text.length > 0) ? text.split(/\s+/).filter((elm)=>{return elm.length!==0}).length : 0} Words / {text.length} Characters</div>
             <div className="btn btn-primary">{(text.length > 0) ? ((0.008 * text.split(" ").length) * 60).toFixed("3") : 0} sec</div>
             <div className='mt-5 position-relative'> <h4>Preview</h4> <div className={preview} style={{ backgroundColor: props.mode === "dark" ? "#0011" : "white", color: props.mode === 'dark' ? "white" : "black" }}>
                 {(text.length > 0) ?
