@@ -102,7 +102,7 @@ export default function TextForm(props) {
             </div>
             <br />
             <div className={`btn btn-${props.mode === 'dark' ? 'primary' : 'secondary'} me-2`}>{(text.length > 0) ? text.trim().split(/[ ]+/).length : 0} Words / {text.length} Characters</div>
-            <div className="btn btn-primary">{(text.length !== "") ? ((0.008 * text.split(" ").length) * 60).toFixed("3") : 0} sec</div>
+            <div className="btn btn-primary">{(text.length > 0) ? ((0.008 * text.split(" ").length) * 60).toFixed("3") : 0} sec</div>
             <div className='mt-5 position-relative'> <h4>Preview</h4> <div className={preview} style={{ backgroundColor: props.mode === "dark" ? "#0011" : "white", color: props.mode === 'dark' ? "white" : "black" }}>
                 {(text.length > 0) ?
                     <div id="prev">
