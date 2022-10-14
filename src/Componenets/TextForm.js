@@ -93,12 +93,12 @@ export default function TextForm(props) {
 
             </div>
             <div className="d-flex flex-wrap mt-3 mb-2" role="group" aria-label="Basic mixed styles example">
-                <Button className={`bg-${props.mode === 'dark' ? "primary text-light border border-secondary" : "secondary text-light border"} mb-1 py-1 px-3 btn`} onClick={UpperCase} value="AA" />
-                <Button className={`bg-${props.mode === 'dark' ? "primary text-light border border-secondary" : "secondary text-light border"} mb-1 py-1 px-3 btn`} onClick={LowerCase} value="aa" />
-                <Button className={`bg-${props.mode === 'dark' ? "primary text-light border border-secondary" : "secondary text-light border"} mb-1 py-1 px-3 btn`} onClick={Capitalize} value="Aa" />
-                <Button className={`bg-${props.mode === 'dark' ? "primary text-light border border-secondary" : "secondary text-light border"} mb-1 py-1 px-3 btn`} onClick={Bold} value={bold} />
-                <Button className={`bg-${props.mode === 'dark' ? "primary text-light border border-secondary" : "secondary text-light border"} mb-1 py-1 px-3 btn`} onClick={copy} value="copy" />
-                <Button className={`bg-${props.mode === 'dark' ? "primary text-light border border-secondary" : "secondary text-light border"} mb-1 py-1 px-3 btn`} onClick={extraspace} value="Remove extra Space" />
+                <Button className={`bg-${props.mode === 'dark' ? "primary text-light border border-secondary" : "secondary text-light border"} mb-1 py-1 px-3 btn ${text.length === 0?"disabled":"" }`} onClick={UpperCase} value="AA" />
+                <Button className={`bg-${props.mode === 'dark' ? "primary text-light border border-secondary" : "secondary text-light border"} mb-1 py-1 px-3 btn ${text.length === 0?"disabled":"" }`} onClick={LowerCase} value="aa" />
+                <Button className={`bg-${props.mode === 'dark' ? "primary text-light border border-secondary" : "secondary text-light border"} mb-1 py-1 px-3 btn ${text.length === 0?"disabled":"" }`} onClick={Capitalize} value="Aa" />
+                <Button className={`bg-${props.mode === 'dark' ? "primary text-light border border-secondary" : "secondary text-light border"} mb-1 py-1 px-3 btn ${text.length === 0?"disabled":"" }`} onClick={Bold} value={bold} />
+                <Button className={`bg-${props.mode === 'dark' ? "primary text-light border border-secondary" : "secondary text-light border"} mb-1 py-1 px-3 btn ${text.length === 0?"disabled":"" }`} onClick={copy} value="copy" />
+                <Button className={`bg-${props.mode === 'dark' ? "primary text-light border border-secondary" : "secondary text-light border"} mb-1 py-1 px-3 btn ${text.length === 0?"disabled":"" }`} onClick={extraspace} value="Remove extra Space" />
             </div>
             <br />
             <div className={`btn btn-${props.mode === 'dark' ? 'primary' : 'secondary'} me-2`}>{(text.length > 0) ? text.split(/\s+/).filter((elm)=>{return elm.length!==0}).length : 0} Words / {text.length} Characters</div>
