@@ -92,7 +92,7 @@ export default function TextForm(props) {
             <div className="btn-group" role="group" aria-label="Basic mixed styles example">
 
             </div>
-            <div className="d-flex flex-wrap mt-3 mb-2" role="group" aria-label="Basic mixed styles example">
+            <div className="input-group mt-3 mb-2 p-0 mx-0">
                 <Button className={`bg-${props.mode === 'dark' ? "primary text-light border border-secondary" : "secondary text-light border"} mb-1 py-1 px-3 btn ${text.length === 0?"disabled":"" }`} onClick={UpperCase} value="AA" />
                 <Button className={`bg-${props.mode === 'dark' ? "primary text-light border border-secondary" : "secondary text-light border"} mb-1 py-1 px-3 btn ${text.length === 0?"disabled":"" }`} onClick={LowerCase} value="aa" />
                 <Button className={`bg-${props.mode === 'dark' ? "primary text-light border border-secondary" : "secondary text-light border"} mb-1 py-1 px-3 btn ${text.length === 0?"disabled":"" }`} onClick={Capitalize} value="Aa" />
